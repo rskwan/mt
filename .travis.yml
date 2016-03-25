@@ -13,12 +13,12 @@ before_install:
   - export DJANGO_SETTINGS_MODULE='mt.settings.ci'
   - export MT_SECRET_KEY='hellotravis'
   - export MT_MYSQL_URL='mysql://root@localhost/test'
-  - pip install codecov
 install:
   - pip install -r requirements/ci.txt
   - pip install Django$DJANGO_VERSION_SPEC
+  - pip install codecov
 script:
   - cd mt
-  - py.test
+  - py.test --cov==./
 after_success:
   - codecov
