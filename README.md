@@ -1,6 +1,7 @@
 # MT
 
 [![Requirements Status](https://requires.io/github/rskwan/mt/requirements.svg?branch=master)](https://requires.io/github/rskwan/mt/requirements/?branch=master)
+[![Build Status](https://travis-ci.org/rskwan/mt.svg?branch=master)](https://travis-ci.org/rskwan/mt)
 
 ## What does "MT" mean?
 
