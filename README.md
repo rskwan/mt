@@ -2,6 +2,7 @@
 
 [![Requirements Status](https://requires.io/github/rskwan/mt/requirements.svg?branch=master)](https://requires.io/github/rskwan/mt/requirements/?branch=master)
 [![Build Status](https://travis-ci.org/rskwan/mt.svg?branch=master)](https://travis-ci.org/rskwan/mt)
+[![codecov.io](https://codecov.io/github/rskwan/mt/coverage.svg?branch=master)](https://codecov.io/github/rskwan/mt?branch=master)
 
 ## What does "MT" mean?
 
