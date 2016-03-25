@@ -15,7 +15,7 @@ def env_var(var_name):
 
 SECRET_KEY = env_var("MT_SECRET_KEY")
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost', '127.0.0.1']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -63,9 +63,8 @@ TEMPLATES = [
 ]
 
 DATABASES = {'default': dj_database_url.parse(env_var("MT_MYSQL_URL"), conn_max_age = 600)}
+DATABASES['default']['ATOMIC_REQUESTS'] = True
 
-# Password validation
-# https://docs.djangoproject.com/en/1.9/ref/settings/#auth-password-validators
 AUTH_PASSWORD_VALIDATORS = [
     {
         'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
@@ -88,5 +87,4 @@ USE_I18N = False
 USE_L10N = True
 USE_TZ = True
 
-# Static files (CSS, JavaScript, Images)
 STATIC_URL = '/static/'

@@ -1,5 +1,7 @@
 # MT
 
+[![Requirements Status](https://requires.io/github/rskwan/mt/requirements.svg?branch=master)](https://requires.io/github/rskwan/mt/requirements/?branch=master)
+
 ## What does "MT" mean?
 
 Math Tournament. Milk Tea. (Or whatever you want it to be.)
@@ -33,4 +35,5 @@ put these in `your_env_name/bin/postactivate`.)
 export DJANGO_SETTINGS_MODULE='mt.settings.local'          # or production
 export MT_SECRET_KEY='milk_tea'                            # randomly generated string
 export MT_MYSQL_URL='mysql://USER:PASSWORD@HOST:PORT/NAME'
+export HOST_NAME='mt.com'                                  # only needed in production
 ```

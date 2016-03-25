@@ -1,0 +1,27 @@
+language: python
+python:
+  - "3.2"
+  - "3.3"
+  - "3.4"
+  - "3.5"
+  - "3.5-dev" # 3.5 development branch
+  - "nightly" # currently points to 3.6-dev
+env:
+  - DJANGO_VERSION=1.8
+  - DJANGO_VERSION=1.9
+services:
+  - mysql
+before_install:
+  - mysql -e "create database IF NOT EXISTS test;" -uroot
+  - export DJANGO_SETTINGS_MODULE='mt.settings.ci'
+  - export MT_SECRET_KEY='hellotravis'
+  - export MT_MYSQL_URL='mysql://root@localhost/test'
+  - pip install codecov
+install:
+  - pip install -r requirements/ci.txt
+  - pip install Django==$DJANGO_VERSION
+script:
+  - cd mt
+  - py.test
+after_success:
+  - codecov
