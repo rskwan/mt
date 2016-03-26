@@ -1,5 +1,9 @@
 [run]
 branch = True
+omit =
+    manage.py
+    */test_*
+    mt/settings/*.py
 
 [report]
 # Regexes for lines to exclude from consideration

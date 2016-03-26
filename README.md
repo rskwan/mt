@@ -10,7 +10,7 @@ Math Tournament. Milk Tea. (Or whatever you want it to be.)
 
 ## Setup
 
-MT requires Python 3 and MySQL.
+MT requires Python 3.4+, Django 1.8+, and MySQL.
 
 ### Installing Python Dependencies
 
@@ -37,5 +37,12 @@ put these in `your_env_name/bin/postactivate`.)
 export DJANGO_SETTINGS_MODULE='mt.settings.local'          # or production
 export MT_SECRET_KEY='milk_tea'                            # randomly generated string
 export MT_MYSQL_URL='mysql://USER:PASSWORD@HOST:PORT/NAME'
-export HOST_NAME='mt.com'                                  # only needed in production
+export MT_ADMIN_PATH='hello'                               # admin is at /hello/ instead of /admin/
+export MT_HOST_NAME='mt.com'                               # only needed in production
 ```
+
+## Testing
+
+To run the test suite, `cd` into `mt` and run `py.test --cov=. --ds=mt.settings.test`.
+If you want an HTML coverage report, add the option `--cov-report html`,
+which will generate a folder `coverage_html_report`.

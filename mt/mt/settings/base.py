@@ -17,6 +17,11 @@ SECRET_KEY = env_var("MT_SECRET_KEY")
 
 ALLOWED_HOSTS = ['localhost', '127.0.0.1']
 
+# ADMIN_PATH controls where the admin urls are.
+# e.g. if ADMIN_PATH == 'adminsitemilktea', then the admin site
+# should be available at /adminsitemilktea/ instead of /admin/.
+ADMIN_PATH = env_var("MT_ADMIN_PATH")
+
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
