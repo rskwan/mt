@@ -19,6 +19,6 @@ install:
   - pip install Django$DJANGO_VERSION_SPEC
   - pip install codecov
 script:
-  - cd mt; py.test --cov=.
+  - cd mt; py.test --ds=mt.settings.ci
 after_success:
   - codecov
