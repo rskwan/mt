@@ -43,6 +43,7 @@ htmlcov/
 nosetests.xml
 coverage.xml
 *,cover
+coverage_html_report
 .hypothesis/
 
 # Translations
@@ -60,3 +61,7 @@ target/
 
 #Ipython Notebook
 .ipynb_checkpoints
+
+# pytest-incremental
+.pytest-incremental
+deps.json

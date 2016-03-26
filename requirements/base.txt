@@ -1,4 +1,6 @@
 dj-database-url==0.4.0
 Django==1.9.4
+django-model-utils==2.4
+django-money==0.7.6
 PyMySQL==0.7.2
 Unipath==1.1

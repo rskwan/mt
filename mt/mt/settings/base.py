@@ -22,7 +22,7 @@ ALLOWED_HOSTS = ['localhost', '127.0.0.1']
 # should be available at /adminsitemilktea/ instead of /admin/.
 ADMIN_PATH = env_var("MT_ADMIN_PATH")
 
-INSTALLED_APPS = [
+DJANGO_CORE_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -30,6 +30,16 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 ]
+
+THIRD_PARTY_APPS = [
+    'djmoney',
+]
+
+CUSTOM_APPS = [
+    'core',
+]
+
+INSTALLED_APPS = DJANGO_CORE_APPS + THIRD_PARTY_APPS + CUSTOM_APPS
 
 MIDDLEWARE_CLASSES = [
     'django.middleware.security.SecurityMiddleware',
