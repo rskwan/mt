@@ -33,6 +33,7 @@ DJANGO_CORE_APPS = [
 
 THIRD_PARTY_APPS = [
     'djmoney',
+    'nested_admin',
 ]
 
 CUSTOM_APPS = [

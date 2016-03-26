@@ -1,8 +1,1 @@
--r base.txt
-
-coverage==4.0.3
-flake8==2.5.4
-model-mommy==1.2.6
-pytest==2.9.1
-pytest-cov==2.2.1
-pytest-django==2.9.1
+-r test.txt

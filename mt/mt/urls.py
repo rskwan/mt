@@ -4,4 +4,5 @@ from django.contrib import admin
 
 urlpatterns = [
     url(r'^' + settings.ADMIN_PATH + r'/', admin.site.urls),
+    url(r'^nested_admin/', include('nested_admin.urls')),
 ]

@@ -12,7 +12,11 @@ class Payable(models.Model):
         abstract = True
 
 class Permalinkable(models.Model):
-    slug = models.SlugField(unique=True)
+    slug = models.SlugField(
+        unique=True,
+        help_text=("A short, unique string that will "
+                   "represent this object in URLs.")
+    )
 
     class Meta:
         abstract = True

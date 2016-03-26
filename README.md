@@ -41,8 +41,19 @@ export MT_ADMIN_PATH='hello'                               # admin is at /hello/
 export MT_HOST_NAME='mt.com'                               # only needed in production
 ```
 
+### Migrations and Your User Account
+
+In order to do anything, you (presumably the webmaster) should set up
+the database and a user account. Run `python manage.py migrate` to apply
+migrations to your db, then run `python manage.py createsuperuser` to
+make a superuser account.
+
+At this point, if you're running locally, you should be able to able
+to start the server with `python manage.py runserver` and log into
+the admin site at `localhost:8000/MT_ADMIN_PATH/`.
+
 ## Testing
 
-To run the test suite, `cd` into `mt` and run `py.test --cov=. --ds=mt.settings.test`.
+To run the test suite, `cd` into `mt` and run `py.test`.
 If you want an HTML coverage report, add the option `--cov-report html`,
 which will generate a folder `coverage_html_report`.

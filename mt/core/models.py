@@ -10,7 +10,7 @@ from .behaviors import Payable, Permalinkable
 class Event(Permalinkable, TimeStampedModel):
     # status: open or closed for registration
     STATUS = Choices('open', 'closed')
-    status = StatusField()
+    status = StatusField(help_text="Status of registration.")
     name = models.CharField(max_length=255)
     start = models.DateField()
     end = models.DateField()
@@ -28,7 +28,11 @@ class PaidEvent(Payable, Event):
 class Item(TimeStampedModel):
     event = models.ForeignKey(Event, on_delete=models.CASCADE)
     name = models.CharField(max_length=255)
-    choices_enabled = models.BooleanField(default=False)
+    choices_enabled = models.BooleanField(
+        default=False,
+        help_text=("Whether or not to show choices. "
+                   "This doesn't disable actually having choices, however.")
+    )
 
     def __str__(self):
         return "{} (Event: {})".format(self.name, self.event)
