@@ -6,7 +6,7 @@
 
 ## What does "MT" mean?
 
-Math Tournament. Milk Tea. (Or whatever you want it to be.)
+Math Tournament. Milk Tea. Empty. (Or whatever you want it to be.)
 
 ## Setup
 
@@ -27,6 +27,15 @@ pip3 install -r requirements/local.txt               # or requirements/productio
 
 Installing and setting up MySQL can be a pain, so be careful.
 For Mac OS X, [here's a guide to setting up (and tearing down) an installation.](https://coderwall.com/p/os6woq/uninstall-all-those-broken-versions-of-mysql-and-re-install-it-with-brew-on-mac-mavericks)
+
+Once/if you have an existing MySQL installation, you might need to run any
+or all of the following commands in a `mysql` console.
+
+```
+create user 'username'@localhost identified by 'pass';
+grant all privileges on mt.* to 'username'@localhost;
+grant all privileges on test_mt.* to 'username'@localhost;
+```
 
 ### Environment Variables
 

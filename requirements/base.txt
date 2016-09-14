@@ -1,7 +1,7 @@
-dj-database-url==0.4.0
-Django==1.9.4
-django-model-utils==2.4
-django-money==0.7.6
-django-nested-admin==2.2.6
-PyMySQL==0.7.2
+dj-database-url==0.4.1
+Django==1.9.9
+django-model-utils==2.5.2
+django-money==0.9.1
+django-nested-admin==3.0.10
+PyMySQL==0.7.9
 Unipath==1.1
